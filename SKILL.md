@@ -11,7 +11,13 @@ Converts a text-based resume into ten designed templates. Each comes out as a DO
 - **Studio set:** havel (tinted sidebar + photo/monogram circle), mosel (timeline + skill tags), saale (black & white serif monogram), lahn (navy band + pill headings).
 
 ## 0. Engine
-The engine ships with this skill in `engine/`, next to this SKILL.md: `curator.py` plus the `resume_curator/` package.
+The engine is `curator.py` plus the `resume_curator/` package. Look for it in this order:
+1. This skill's own `engine/` folder, next to this SKILL.md.
+2. An attached `resume-curator.zip`: unzip it into its own empty directory.
+3. A connected folder containing `engine/curator.py`.
+4. If none of these exist, ask the user to attach the ZIP from the project's GitHub page. Do not rebuild the engine.
+
+Then:
 1. Copy the `engine/` folder into the working directory. Don't edit it in place.
 2. Check the dependencies: python-docx, pdfplumber and Pillow for Python, plus LibreOffice (`soffice`) and poppler (`pdftotext`, `pdffonts`). Run `which soffice pdftotext` and try the imports.
 3. Run `python3 engine/curator.py selftest` once. It must print `SELFTEST PASSED`.
