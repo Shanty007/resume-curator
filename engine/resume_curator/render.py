@@ -379,7 +379,10 @@ def _header(D: Doc, cv, photo):
         c_lines = max(1, -(-len("  |  ".join(items)) // max(chars, 30))) if items else 0
         est = s["name_pt"] * 1.25 + 1 + (s["headline_pt"] * 1.3 + 5 if headline else 0) \
             + c_lines * s["body_pt"] * 1.3 + 2
-        gap = 3.0 / 3 * 4 / 2.54 * 72 - est - 10  # photo height (pt) minus text height
+        from PIL import Image as _Im
+        with _Im.open(photo) as _im:
+            ratio = 1.0 if s.get("photo_shape") == "circle" else _im.height / _im.width
+        gap = 3.0 * ratio / 2.54 * 72 - est - 10  # real photo height (pt) minus text height
         if gap > 0:
             D.p([], before=gap)
 
@@ -611,7 +614,8 @@ def _entry_inner(D: Doc, title, org, loc, start, end, bullets, desc=None):
 def _section_summary(D, cv):
     if cv.get("summary"):
         D.heading("summary")
-        D.p([(cv["summary"], {})], left_cm=D.content_left_cm(), after=2, line=1.15)
+        left = None if D.s.get("full_width_intro") else D.content_left_cm()
+        D.p([(cv["summary"], {})], left_cm=left, after=2, line=1.15)
 
 
 def _section_competencies(D, cv):
@@ -619,7 +623,7 @@ def _section_competencies(D, cv):
     if not comps:
         return
     D.heading("competencies")
-    col = D.content_left_cm()
+    col = 0 if D.s.get("full_width_intro") else D.content_left_cm()
     if D.s.get("chips"):
         ch = D.s["chips"]
         runs = []

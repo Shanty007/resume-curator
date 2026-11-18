@@ -21,7 +21,7 @@ TEMPLATES = {
         "label": "Spree: German tabular (tabellarischer Lebenslauf)",
         "inspired_by": "classic DE Lebenslauf / Resume.io 'Berlin'-style date gutter",
         "best_for": "German Mittelstand, automotive, engineering, public sector",
-        "layout": "tabular", "date_col_cm": 3.6,
+        "layout": "tabular", "date_col_cm": 3.6, "full_width_intro": True,
         "font_docx": "Calibri", "font_pdf": "Carlito",
         "head_font_docx": "Calibri", "head_font_pdf": "Carlito",
         "body_pt": 10.5, "name_pt": 24, "headline_pt": 12,
