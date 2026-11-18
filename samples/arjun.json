@@ -1,0 +1,120 @@
+{
+  "name": "Arjun Mehta",
+  "headline": "Validation Engineer – Infotainment & ADAS",
+  "contact": {
+    "email": "arjun.mehta@example.com",
+    "linkedin": "linkedin.com/in/arjun-mehta-demo",
+    "phone": "+49 151 2345 6789",
+    "location": "Munich, Germany"
+  },
+  "personal": {},
+  "summary": "Validation engineer with 4+ years of in-vehicle testing for premium OEM infotainment and ADAS functions. Experienced in ECU flashing, CAN/Ethernet trace analysis and test automation with CAPL and Python. Reduced regression cycle time by 30% through scripted test benches.",
+  "experience": [
+    {
+      "title": "Test Engineer – Infotainment",
+      "company": "Bertelsmann Engineering GmbH",
+      "location": "Munich",
+      "start": "03/2023",
+      "end": "Present",
+      "bullets": [
+        "Execute in-vehicle and HIL test campaigns for head-unit software releases across 3 vehicle lines.",
+        "Flash QNX and Android stacks via DTS Monaco and QFIL; triage boot and update failures.",
+        "Analyse CAN and automotive Ethernet traces in CANoe; file 250+ defects in JIRA with root-cause data."
+      ]
+    },
+    {
+      "title": "Working Student, Car Functions Verification",
+      "company": "NovaDrive Labs",
+      "location": "Berlin",
+      "start": "09/2021",
+      "end": "02/2023",
+      "bullets": [
+        "Built CAPL scripts that automated 40% of the manual smoke tests for ADAS feature releases.",
+        "Maintained XML test specifications and traceability to system requirements in Polarion."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Sc. Mechanical Engineering",
+      "institution": "Technical University of Munich",
+      "location": "",
+      "start": "10/2019",
+      "end": "03/2022",
+      "details": [
+        "Thesis: Sensor-fusion fault injection for lane-keeping validation (grade 1.3)"
+      ]
+    },
+    {
+      "degree": "B.E. Industrial Engineering",
+      "institution": "University of Pune",
+      "location": "",
+      "start": "08/2015",
+      "end": "06/2019",
+      "details": []
+    }
+  ],
+  "skills": [
+    {
+      "category": "Testing",
+      "items": [
+        "HIL",
+        "in-vehicle testing",
+        "regression testing",
+        "ISTQB Foundation"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "CANoe",
+        "CANalyzer",
+        "DTS Monaco",
+        "QFIL",
+        "JIRA",
+        "Polarion",
+        "Git"
+      ]
+    },
+    {
+      "category": "Programming",
+      "items": [
+        "CAPL",
+        "Python",
+        "XML"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "level": "C1"
+    },
+    {
+      "language": "German",
+      "level": "B2"
+    },
+    {
+      "language": "Hindi",
+      "level": "Native"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "ISTQB Certified Tester Foundation Level (2022)"
+    },
+    {
+      "name": "Vector CANoe Fundamentals (2021)"
+    }
+  ],
+  "projects": [],
+  "extra_sections": [],
+  "section_order": [
+    "summary",
+    "experience",
+    "education",
+    "skills",
+    "languages",
+    "certifications"
+  ]
+}

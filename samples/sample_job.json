@@ -1,0 +1,27 @@
+{
+  "title": "HIL Validation Engineer",
+  "company": "Example Automotive GmbH (fictional)",
+  "years": 3,
+  "domain": [
+    "automotive",
+    "ADAS"
+  ],
+  "must_have": [
+    "HIL",
+    "regression testing",
+    "CAPL",
+    "Python",
+    "CANoe",
+    "defect analysis"
+  ],
+  "tools": [
+    "JIRA",
+    "Polarion",
+    "Git"
+  ],
+  "nice_to_have": [
+    "ISTQB",
+    "German B2"
+  ],
+  "soft": []
+}
