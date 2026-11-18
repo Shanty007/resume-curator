@@ -5,7 +5,7 @@ Free, open-source resume templates that look like Canva and pass ATS parsers lik
 Resume Curator turns a plain resume (DOCX, PDF or TXT) into **10 designed templates**, each as a DOCX and a PDF. Every output is read back the way an applicant-tracking system reads it, and has to pass. It can also **tailor your resume to a job ad** without inventing anything.
 
 ![All 10 templates](docs/gallery.png)
-*All examples use a fictional person.*
+*All examples use a fictional person. Browse every template as PDF/DOCX in [`examples/`](examples/).*
 
 ## Why
 

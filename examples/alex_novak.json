@@ -1,0 +1,169 @@
+{
+  "name": "Alex Novak",
+  "headline": "End-to-end Software Tester | Automotive & Telematics | Test Automation",
+  "contact": {
+    "location": "Hamburg, Germany",
+    "phone": "+49 151 0000 0000",
+    "email": "alex.novak@example.com",
+    "linkedin": "linkedin.com/in/alex-novak-example"
+  },
+  "personal": {
+    "Work authorization": "EU Blue Card (Germany)"
+  },
+  "summary": "Test Engineer with 2+ years of hands-on experience on premium-OEM vehicle projects (Nordwerk Engineering, Velora Mobility Labs) testing vehicle software and telematics end to end: from test case creation and in-vehicle software testing to defect analysis and documentation. Experienced in identifying unclear or contradictory requirements, automating tests (Python, CAPL, XML) and assuring software quality from requirements analysis to bug fixing. Validates TCU connectivity and SecOC on production cockpit platforms. ISTQB Foundation Level in preparation.",
+  "experience": [
+    {
+      "title": "Test Engineer – Vehicle Infotainment",
+      "company": "Nordwerk Engineering GmbH",
+      "location": "Hamburg",
+      "start": "11/2025",
+      "end": "Present",
+      "bullets": [
+        "Validate SecOC (Secure Onboard Communication) and TCU connectivity as part of system integration.",
+        "Conduct vehicle-level testing and staging, correlating HMI behaviour with underlying ECU signals and system responses.",
+        "Derive new test cases from technical specifications where requirements are unclear; develop automation scripts and verify them on real systems.",
+        "Own the end-to-end test lifecycle for embedded cockpit software, from requirements analysis and test planning to execution, defect tracking and release readiness (JIRA, Confluence, GitLab CI/CD).",
+        "Perform root-cause analysis using CANoe signals, system logs and data-logger recordings; reproduce faults and drive corrective actions with development teams.",
+        "Prepare and configure test systems across QNX, Android, RichOS and VCPU: ECU flashing, variant coding and diagnostics with QFIL and DTS Monaco."
+      ]
+    },
+    {
+      "title": "Car Functions & Verification Engineer (Working Student)",
+      "company": "Velora Mobility Labs",
+      "location": "Hamburg",
+      "start": "09/2024",
+      "end": "11/2025",
+      "bullets": [
+        "Tested connectivity features including WLAN, Bluetooth, Apple CarPlay and Android Auto.",
+        "Developed and executed CAPL and XML test scripts for automated functional and regression testing.",
+        "Reproduced in-car and real-drive faults through signal and log analysis; documented defects and supported troubleshooting with development teams.",
+        "Supported integration testing of Instrument Cluster, infotainment and HUD across connected ECUs; performed Android flashing and ECU software provisioning."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Voice Assistant AI Integration",
+      "bullets": [
+        "Independently owned validation of an on-device speech model integration: test approach, execution, result analysis and defect reporting."
+      ]
+    },
+    {
+      "name": "Test Automation from Specifications",
+      "bullets": [
+        "Turned ambiguous requirements into structured test cases and validated automation scripts on real systems."
+      ]
+    },
+    {
+      "name": "Multi-OS Cockpit Platforms (4 generations)",
+      "bullets": [
+        "Validated software across four cockpit platform generations, including a hybrid QNX/Android platform; isolated faults across real-time and non-real-time OS boundaries."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Sc. Industrial Engineering & International Management",
+      "institution": "Lindenberg University of Applied Sciences",
+      "location": "Hamburg",
+      "start": "2022",
+      "end": "2024",
+      "details": [
+        "Grade 1.8",
+        "Thesis: Quality Management in Autonomous Last-Mile Delivery – A Lean Six Sigma Approach"
+      ]
+    },
+    {
+      "degree": "B.Tech Mechanical Engineering",
+      "institution": "Westbrook Institute of Technology",
+      "location": "Pune",
+      "start": "2016",
+      "end": "2020",
+      "details": [
+        "CGPA 8.5/10",
+        "Thesis: Electromagnetic Braking System Using the Eddy Current Principle"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Software Testing",
+      "items": [
+        "End-to-end testing",
+        "in-vehicle software testing",
+        "test case design",
+        "requirements analysis",
+        "manual and automated testing",
+        "regression testing",
+        "bug tracking",
+        "test documentation"
+      ]
+    },
+    {
+      "category": "Telematics & Connectivity",
+      "items": [
+        "TCU",
+        "SecOC",
+        "WLAN",
+        "Bluetooth",
+        "Apple CarPlay",
+        "Android Auto",
+        "connected-vehicle functions"
+      ]
+    },
+    {
+      "category": "Programming & Scripting",
+      "items": [
+        "Python",
+        "C",
+        "CAPL",
+        "XML"
+      ]
+    },
+    {
+      "category": "Platforms",
+      "items": [
+        "QNX RTOS",
+        "Android Automotive OS",
+        "RichOS",
+        "VCPU",
+        "AUTOSAR",
+        "CAN",
+        "Automotive Ethernet",
+        "UDS diagnostics"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Vector CANoe",
+        "CANalyzer",
+        "DTS Monaco",
+        "QFIL",
+        "JIRA",
+        "Confluence",
+        "GitLab CI/CD",
+        "Jenkins",
+        "Git"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "level": "Fluent"
+    },
+    {
+      "language": "German",
+      "level": "B1"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "ISTQB Certified Tester Foundation Level – exam in preparation"
+    },
+    {
+      "name": "DGUV I 209-093 – occupational safety training for high-voltage vehicle systems"
+    }
+  ]
+}

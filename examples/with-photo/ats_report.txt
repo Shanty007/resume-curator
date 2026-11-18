@@ -1,0 +1,10 @@
+[PASS] Alex_Novak_spree.pdf: ATS score 100/100
+[PASS] Alex_Novak_spree.docx: ATS score 100/100
+[PASS] Alex_Novak_neckar.pdf: ATS score 100/100
+[PASS] Alex_Novak_neckar.docx: ATS score 100/100
+[PASS] Alex_Novak_havel.pdf: ATS score 100/100
+[PASS] Alex_Novak_havel.docx: ATS score 100/100
+[PASS] Alex_Novak_mosel.pdf: ATS score 100/100
+[PASS] Alex_Novak_mosel.docx: ATS score 100/100
+[PASS] Alex_Novak_lahn.pdf: ATS score 100/100
+[PASS] Alex_Novak_lahn.docx: ATS score 100/100
