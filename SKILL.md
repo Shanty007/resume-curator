@@ -19,7 +19,7 @@ The engine is `curator.py` plus the `resume_curator/` package. Look for it in th
 
 Then:
 1. Copy the `engine/` folder into the working directory. Don't edit it in place.
-2. Check the dependencies: python-docx, pdfplumber and Pillow for Python, plus LibreOffice (`soffice`) and poppler (`pdftotext`, `pdffonts`). Run `which soffice pdftotext` and try the imports.
+2. Check the dependencies: python-docx, pdfplumber and Pillow for Python, plus LibreOffice (`soffice`) and poppler (`pdftotext`, `pdffonts`). Run `which soffice pdftotext` and try the imports. Fonts are bundled in `engine/fonts/` and load automatically, so don't install or substitute fonts.
 3. Run `python3 engine/curator.py selftest` once. It must print `SELFTEST PASSED`.
 
 ## 1. Extract text (never OCR)

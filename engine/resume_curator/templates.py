@@ -117,7 +117,6 @@ TEMPLATES = {
 #   timeline        -> paragraph left borders (no shapes, no text boxes)
 #   skill chips     -> character shading on real text
 #   pill headings   -> character shading on a real heading
-P = "/usr/share/fonts/truetype/google-fonts/"
 TEMPLATES.update({
     "havel": {
         "label": "Havel: tinted sidebar (Canva sidebar look, single text flow)",
@@ -165,7 +164,7 @@ TEMPLATES.update({
         "accent": "8A6A3B", "text": "161616", "muted": "5E5E5E",
         "margins_cm": (1.8, 2.0, 1.6, 2.0),
         "header": "left", "band": False,
-        "badge_bg": "161616", "badge_fg": "F3EEE4", "badge_font": P + "ofl/crimsontext/CrimsonText-SemiBold.ttf",
+        "badge_bg": "161616", "badge_fg": "F3EEE4", "badge_font": "CrimsonText-SemiBold.ttf",
         "heading": {"case": "smallcaps", "rule": "bottom-thin", "size": 13.5, "color": "text",
                     "spacing_pt": 0.5, "bar": False},
         "order": COMMON_ORDER, "photo": False,

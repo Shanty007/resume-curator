@@ -75,9 +75,9 @@ The method: keep one master resume. For each job, change only the headline (same
 * Python 3.10+: `pip install -r requirements.txt`
 * LibreOffice: `soffice` must be on your PATH, for the PDF export.
 * poppler-utils: `pdftotext` and `pdffonts`, for reading PDFs and for the ATS check.
-* Optional fonts for the PDFs: Carlito, Caladea, Inter, Fira Sans, Liberation Sans, Poppins, Crimson Text (all free). If one is missing, LibreOffice substitutes it and the ATS check still passes.
+* Fonts: nothing to install. The fonts are bundled in `engine/fonts/` (OFL/Apache, see `engine/fonts/licenses/`) and loaded into a private LibreOffice profile for each export, so every machine produces the same PDFs. The DOCX files use Word's own fonts (Calibri, Cambria, Arial, Georgia), so they open cleanly in Word.
 
-On Debian/Ubuntu: `sudo apt install libreoffice-writer poppler-utils fonts-crosextra-carlito fonts-crosextra-caladea fonts-liberation`.
+On Debian/Ubuntu: `sudo apt install libreoffice-writer poppler-utils`. On macOS: `brew install --cask libreoffice && brew install poppler`. On Windows: install LibreOffice (found automatically) and poppler (add its `bin` folder to PATH).
 
 ## Honest limitations
 

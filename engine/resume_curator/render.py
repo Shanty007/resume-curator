@@ -457,9 +457,9 @@ def _badge_png(D: Doc, cv, photo, size_cm, square=False):
     else:
         im = Image.new("RGB", (px, px), "#" + s.get("badge_bg", s["accent"]))
         d = ImageDraw.Draw(im)
-        fpath = s.get("badge_font", "/usr/share/fonts/truetype/google-fonts/Poppins-Medium.ttf")
+        fpath = str(FONT_DIR / s.get("badge_font", "Poppins-Medium.ttf"))
         f = None
-        for cand in (fpath, "arialbd.ttf", "DejaVuSans-Bold.ttf"):   # Windows/Linux fallbacks
+        for cand in (fpath, "arialbd.ttf", "Arial Bold.ttf", "DejaVuSans-Bold.ttf"):   # Windows/Linux fallbacks
             try:
                 f = ImageFont.truetype(cand, int(px * 0.38)); break
             except OSError:
@@ -794,13 +794,38 @@ def build_docx(cv: dict, template: str, out_path: Path, pdf_mode=False, lang="en
     return out_path
 
 
+FONT_DIR = Path(__file__).resolve().parent.parent / "fonts"
+
+
+def _soffice() -> str:
+    """Find LibreOffice on Linux, macOS or Windows."""
+    for name in ("soffice", "libreoffice"):
+        hit = shutil.which(name)
+        if hit:
+            return hit
+    for cand in (r"C:\Program Files\LibreOffice\program\soffice.exe",
+                 r"C:\Program Files (x86)\LibreOffice\program\soffice.exe",
+                 "/Applications/LibreOffice.app/Contents/MacOS/soffice"):
+        if Path(cand).exists():
+            return cand
+    raise RuntimeError("LibreOffice not found: install it and make sure 'soffice' is on PATH.")
+
+
 def docx_to_pdf(docx_path: Path, out_dir: Path) -> Path:
-    """LibreOffice export: tagged PDF/A-2b (fonts embedded, Unicode text map)."""
+    """LibreOffice export: tagged PDF/A-2b (fonts embedded, Unicode text map).
+    The bundled fonts are loaded through a private LibreOffice profile, so every
+    install renders identically and nothing is installed system-wide."""
     filt = ('pdf:writer_pdf_Export:{"UseTaggedPDF":{"type":"boolean","value":"true"},'
             '"SelectPdfVersion":{"type":"long","value":"2"},'
             '"ExportBookmarks":{"type":"boolean","value":"false"}}')
-    profile = tempfile.mkdtemp(prefix="lo_")
-    subprocess.run(["soffice", f"-env:UserInstallation=file://{profile}", "--headless",
+    profile = Path(tempfile.mkdtemp(prefix="lo_"))
+    if FONT_DIR.is_dir():
+        dest = profile / "user" / "fonts"
+        dest.mkdir(parents=True, exist_ok=True)
+        for f in FONT_DIR.iterdir():
+            if f.suffix.lower() in (".ttf", ".otf"):
+                shutil.copy2(f, dest / f.name)
+    subprocess.run([_soffice(), f"-env:UserInstallation={profile.as_uri()}", "--headless",
                     "--convert-to", filt, "--outdir", str(out_dir), str(docx_path)],
                    capture_output=True, timeout=180)
     shutil.rmtree(profile, ignore_errors=True)

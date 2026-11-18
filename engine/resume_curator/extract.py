@@ -212,7 +212,8 @@ def extract_text(path: str | Path) -> str:
     if ext in (".doc", ".odt", ".rtf"):
         # convert with LibreOffice to docx first (still a text conversion, no OCR)
         outdir = path.parent
-        subprocess.run(["soffice", "--headless", "--convert-to", "docx", "--outdir",
+        from .render import _soffice
+        subprocess.run([_soffice(), "--headless", "--convert-to", "docx", "--outdir",
                         str(outdir), str(path)], capture_output=True, timeout=120)
         return _docx_text(outdir / (path.stem + ".docx"))
     raise ValueError(f"Unsupported input type: {ext}")
